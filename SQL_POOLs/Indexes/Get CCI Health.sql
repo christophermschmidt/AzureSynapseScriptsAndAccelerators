@@ -27,10 +27,10 @@ Date(yyyy-mm-dd)    Author              Comments
 ***************************************************************************************************/
  SELECT
 
-	    DB_Name()                                                                AS [database_name]
+        DB_Name()                                                                AS [database_name]
 ,       s.name                                                                  AS [schema_name]
 ,       t.name                                                                  AS [table_name]
-,        rg.[partition_number]                                                  AS [table_partition]
+,       rg.[partition_number]                                                  AS [table_partition]
 ,       SUM(rg.[total_rows])                                                    AS [row_count_total]
 ,       SUM(rg.[total_rows])/COUNT(DISTINCT rg.[distribution_id])               AS [row_count_per_distribution_MAX]
 ,       CEILING    ((SUM(rg.[total_rows])*1.0/COUNT(DISTINCT rg.[distribution_id]))/1048576) AS [rowgroup_per_distribution_MAX]
