@@ -1,3 +1,9 @@
+#Serverless
+    Contains a repository of scripts that may be useful as you build out a serverless SQL environment
+
+#SQL_pools
+    contains a useful list of DMV queries that can be used to find the health of a dedicated sql pool
+
 
 # Contributing
 
